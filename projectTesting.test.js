@@ -1,3 +1,4 @@
+import { ceaserCipher } from "./ceaserCipher";
 import { capitalize, reverseString, calculator } from "./projectTesting";
 
 test("first letter to be capital in string", () => {
@@ -31,3 +32,11 @@ test("Objects third function should return product of two given numbers", () => 
 test("Objects fourth function should return quotient of two given numbers", () => {
   expect(calculator.divide(2, 2)).toBe(0);
 });
+
+test ('check if each alphabet is shifted acoording to the shift factor',()=>{
+  expect(ceaserCipher('abc')).toBe(ceaserCipher('xyz'))
+});
+
+test('check if ceaserCipher returns the string in same pattern case sensitivity as given',()=>{
+  expect(ceaserCipher().toBe(ceaserCipher()))
+})
